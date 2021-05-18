@@ -1,0 +1,139 @@
+body {
+    background-color: darkslategray;
+}
+
+/* флексбоксы */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.changeFlex {
+    display: flex;
+    gap: .5rem;
+}
+
+/* навигационное меню 
+// накидать стилей на кнопки
+*/
+
+.sideBar {
+    background-color: yellow;
+    height: 70px;
+    padding: 0;
+}
+
+.sideBar img {
+    width: 40px;
+    margin-top: 15px;
+    margin-left: 30px;
+    float: left;
+}
+
+.sideBarMenu {
+    font-size: 30px;
+    margin-top: -15px;
+    text-align: center;
+}
+
+.sideBarMenu ul li {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.sideBarMenu a {
+    margin-right: 80px;
+    margin-left: 80px;
+    color: black;
+    text-decoration: none;
+}
+
+.sideBarMenu a:hover {
+    color: blue;
+    border-bottom: 1px solid sienna;
+    border-radius: 10px;
+}
+
+/* левое меню (вспомогательное) */
+
+.leftBar {
+    background-color: green;
+    width: 180px;
+    height: 740px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barMenu a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.barMenu ul a li {
+    margin: 30px 0 30px 0;
+}
+
+.leftBarText {
+    text-align: center;
+    line-height: 17px;
+    margin-bottom: 30px;
+}
+
+/* основной контент с таблицей ганта 
+// добавить стили для двух кнопок + переход по
+страницам (одностраничник, скрывать / показывать
+элементы)
+*/
+
+.content {
+    background-color: blue;
+    height: 740px;
+    width: 100%;
+}
+
+.nav {
+    height: auto;
+    /* padding-bottom: 40px; */
+}
+
+.nav button:first-child {
+    margin-right: 20px;
+}
+
+.nav button {
+    background-color: blueviolet;
+    font-size: 25px;
+    color: black;
+}
+
+nav button:target {
+    color: red
+}
+
+/* Диаграмма ганта стилизация */
+
+#graph-Gant {
+    height: 80%;
+    padding: 40px 40px;
+}
+
+/* футер 
+//добавить оформление футера (не критично, может
+подождать)
+*/
+
+footer {
+    background-color: orange;
+    height: 70px;
+}
+
+h1 {
+    text-align: center;
+}
