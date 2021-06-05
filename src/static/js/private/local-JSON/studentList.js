@@ -16,4 +16,13 @@ const list = [
 ]
 
 const pair = [2,3,4,5]
-export {list, pair}
+
+const status = [
+    "долг",
+    "закрыт",
+    "в работе",
+    "завершен",
+    "не подтвержден",
+    "открыт повторно"
+]
+export {list, pair, status}

@@ -1,0 +1,36 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url(./modules/varibles.css);
+@import url(./modules/left_Bar.css);
+@import url(./modules/content.css);
+@import url(./modules/top_menu.css);
+
+/* Style for modal window */
+@import url(./modules/modal.css);
+
+main {
+    width: 1400px;
+    height: 700px;
+    outline: 3px solid gray;
+    /* background-color: brown; */
+    display: flex;
+}
+
+.main-content-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

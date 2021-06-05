@@ -1,7 +1,7 @@
-import {multiFetch} from './additionalModules/helpers_Module.js';
-// import {makeGraph} from './parsingData/making.js';
-// import scheme1 from '../local-JSON/scheme1.js';
-
-multiFetch('http://10.3.0.87:2000/schemas/master/Предмет_1')
+import { config } from '../config.js';
+import { makeGraph } from './parsingData/making.js';
 
 // makeGraph(scheme1)
+fetch(`http://${config.url}/schema/1`)
+    .then(response => response.json())
+    .then(response => makeGraph(response))

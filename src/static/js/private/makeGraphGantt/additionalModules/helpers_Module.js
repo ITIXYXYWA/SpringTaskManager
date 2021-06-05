@@ -1,4 +1,3 @@
-import {makeGraph} from '../parsingData/making.js';
 import {makePercent} from '../parsingData/percentForTasks.js';
 import {parsTask} from '../parsingData/parsFields.js';
 
@@ -15,7 +14,7 @@ function multiFetch (url) {
                 makeUserList(result)
             break
             
-            case 'http://10.3.0.87:2000/schemas/master/Предмет_1':
+            case 'http://localhost:2000/admin/schema/1':
                 makeGraph(result)
             break
 
@@ -24,12 +23,12 @@ function multiFetch (url) {
 }
 
 async function getSummary ({url, tasks}) {
-   const response = await fetch(url);
-    const result_1 = await response.json();
+    const response = await fetch(url);
+    const summary = await response.json();
     return makePercent({
         data: parsTask(tasks),
-        summary: result_1
-    });
+        summary: summary
+    })
 }
 
-export {multiFetch, getSummary}
+export {getSummary}

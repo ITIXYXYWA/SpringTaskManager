@@ -1,0 +1,18 @@
+.modal-win {
+    height: 230px;
+    width: 330px;
+    background-color: var(--background);
+}
+
+.modal-win h1 {
+    text-align: center;
+}
+
+.content-win {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 26px;
+}
