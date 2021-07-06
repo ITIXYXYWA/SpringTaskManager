@@ -1,9 +1,14 @@
 import { clearing } from "../makeGraphGantt/additionalModules/clearing.js";
 import { uploadSchemaListener } from "../rest_Post/upload_schema.js";
 import { validateStudent } from "./addStudentToSchema.js";
-import { createSchemas } from "./createListSchemas.js";
-
+import { createSchemas } from "../rest_Post/createListSchemas.js";
+import { getReports } from "./reports/getReports.js";
+import { selectSchema } from "./selectSchema/schemasSelect.js";
 uploadSchemaListener()
+
+selectSchema()
+
+document.getElementById('listReports').addEventListener('click', getReports)
 
 document.getElementById('listOfSchemas').onclick = () => {
     let schemas
@@ -23,10 +28,10 @@ document.getElementById('listOfSchemas').onclick = () => {
     }
 
     document.getElementById('listSchemas').addEventListener('change', e => {
-        if (e.target.value !== 'Выберите схему') {
+        if (e.target.value !== 'Выберите курс') {
             document.getElementById('saveUserToSchema').setAttribute('rel','modal:open')    
         } else {
-                document.getElementById('saveUserToSchema').setAttribute('rel','')
+            document.getElementById('saveUserToSchema').setAttribute('rel','')
         }
     })
 
@@ -35,5 +40,5 @@ document.getElementById('listOfSchemas').onclick = () => {
     clearing('extra-content')
     document.addEventListener('click', e => e.target.id === 'modalBtnBack' ? clearing('extra-content') : null)
     schemas = null
-    document.getElementById('listSchemas').insertAdjacentHTML('beforeend', '<option>Выберите схему</option>')
+    document.getElementById('listSchemas').insertAdjacentHTML('beforeend', '<option>Выберите курс</option>')
 }
